@@ -59,7 +59,7 @@ const TheSpace = () => {
                 It is the only state-of-the-art indoor free space training area of its kind in Delhi NCR.
               </p>
               
-              <Button variant="cta" onClick={handleWhatsApp} className="gap-2">
+              <Button variant="whatsapp" onClick={handleWhatsApp} className="gap-2">
                 <MessageCircle className="h-4 w-4" />
                 Book a Visit
               </Button>
@@ -141,9 +141,9 @@ const TheSpace = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Visit us and see why Training World is different from any gym you've been to.
           </p>
-          <Button variant="cta" size="lg" onClick={handleWhatsApp} className="gap-3">
+          <Button variant="whatsapp" size="lg" onClick={handleWhatsApp} className="gap-3">
             <MessageCircle className="h-5 w-5" />
-            Schedule a Tour
+            Schedule a Tour on WhatsApp
           </Button>
         </div>
       </section>

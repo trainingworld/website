@@ -156,9 +156,9 @@ const WhoNeedsUs = () => {
           <p className="text-xl text-muted-foreground mb-8">
             No matter who you are or where you're starting from, we're here to support your journey.
           </p>
-          <Button variant="cta" size="lg" onClick={handleWhatsApp} className="gap-3">
+          <Button variant="whatsapp" size="lg" onClick={handleWhatsApp} className="gap-3">
             <MessageCircle className="h-5 w-5" />
-            Let's Talk
+            Chat With Us on WhatsApp
           </Button>
         </div>
       </section>

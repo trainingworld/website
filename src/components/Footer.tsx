@@ -84,10 +84,10 @@ const Footer = () => {
             </p>
             <button
               onClick={handleWhatsApp}
-              className="bg-white text-black px-6 py-3 text-xs font-bold uppercase tracking-wide hover:bg-white/90 transition-all hover:scale-105 flex items-center gap-2"
+              className="bg-[#25D366] text-white px-6 py-3 text-xs font-bold uppercase tracking-wide hover:bg-[#20BA5A] transition-all hover:scale-105 flex items-center gap-2 shadow-lg"
             >
               <MessageCircle className="h-4 w-4" />
-              Enquire Now
+              WhatsApp Us
             </button>
           </div>
         </div>

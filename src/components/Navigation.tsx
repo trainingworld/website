@@ -75,9 +75,9 @@ const Navigation = () => {
             >
               <Phone className="h-5 w-5" />
             </Button>
-            <Button variant="hero" onClick={handleWhatsApp} className="gap-2">
+            <Button variant="whatsapp" onClick={handleWhatsApp} className="gap-2">
               <MessageCircle className="h-4 w-4" />
-              Enquire Now
+              WhatsApp Us
             </Button>
           </div>
 
@@ -114,10 +114,10 @@ const Navigation = () => {
                   className="flex-1 text-white border-white hover:bg-white hover:text-black"
                 >
                   <Phone className="h-4 w-4 mr-2" />
-                  Call Us
+                  Call
                 </Button>
                 <Button
-                  variant="hero"
+                  variant="whatsapp"
                   size="sm"
                   onClick={handleWhatsApp}
                   className="flex-1"

@@ -113,9 +113,9 @@ const Gallery = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Schedule a tour and experience the Training World difference in person.
           </p>
-          <Button variant="cta" size="lg" onClick={handleWhatsApp} className="gap-3">
+          <Button variant="whatsapp" size="lg" onClick={handleWhatsApp} className="gap-3">
             <MessageCircle className="h-5 w-5" />
-            Book a Tour
+            Book a Tour on WhatsApp
           </Button>
         </div>
       </section>

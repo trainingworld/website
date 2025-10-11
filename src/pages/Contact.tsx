@@ -39,9 +39,9 @@ const Contact = () => {
                 The fastest way to get in touch. Send us a message and we'll respond quickly to discuss your fitness
                 goals.
               </p>
-              <Button variant="hero" size="lg" onClick={handleWhatsApp} className="gap-3">
+              <Button variant="whatsapp" size="lg" onClick={handleWhatsApp} className="gap-3">
                 <MessageCircle className="h-5 w-5" />
-                Start Conversation
+                Start WhatsApp Chat
               </Button>
             </div>
 
@@ -156,9 +156,9 @@ const Contact = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Don't wait. Your fitness journey starts with a simple message.
           </p>
-          <Button variant="cta" size="lg" onClick={handleWhatsApp} className="gap-3">
+          <Button variant="whatsapp" size="lg" onClick={handleWhatsApp} className="gap-3">
             <MessageCircle className="h-5 w-5" />
-            Get Started Now
+            Get Started on WhatsApp
           </Button>
         </div>
       </section>

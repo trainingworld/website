@@ -12,6 +12,10 @@ All colors MUST be HSL.
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
     
+    /* WhatsApp Brand Color */
+    --whatsapp: 142 70% 49%;
+    --whatsapp-hover: 142 70% 45%;
+    
     --background-dark: 0 0% 0%;
     --background-neutral: 36 25% 88%;
     

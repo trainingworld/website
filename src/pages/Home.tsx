@@ -25,9 +25,9 @@ const Home = () => {
             Bespoke fitness training designed around your lifestyle. No judgement, no crowd, just focused training
             that works for you.
           </p>
-          <Button variant="hero" size="lg" onClick={handleWhatsApp} className="gap-3">
+          <Button variant="whatsapp" size="lg" onClick={handleWhatsApp} className="gap-3">
             <MessageCircle className="h-5 w-5" />
-            Start Your Journey
+            Message Us on WhatsApp
           </Button>
         </div>
       </section>
@@ -135,9 +135,9 @@ const Home = () => {
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
             Message us on WhatsApp to discuss your fitness goals and book your first session.
           </p>
-          <Button variant="cta" size="lg" onClick={handleWhatsApp} className="gap-3">
+          <Button variant="whatsapp" size="lg" onClick={handleWhatsApp} className="gap-3">
             <MessageCircle className="h-5 w-5" />
-            Get Started Today
+            Get Started on WhatsApp
           </Button>
         </div>
       </section>

@@ -127,9 +127,9 @@ const About = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Ready to start your personalized fitness journey? Let's discuss your goals.
           </p>
-          <Button variant="cta" size="lg" onClick={handleWhatsApp} className="gap-3">
+          <Button variant="whatsapp" size="lg" onClick={handleWhatsApp} className="gap-3">
             <MessageCircle className="h-5 w-5" />
-            Message Richard
+            Message Richard on WhatsApp
           </Button>
         </div>
       </section>
