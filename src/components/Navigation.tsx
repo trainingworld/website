@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Button } from "./ui/button";
+import { handleWhatsApp, handleCall } from "@/lib/utils";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,14 +30,6 @@ const Navigation = () => {
     { name: "Contact", path: "/contact" },
   ];
 
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/919999999999?text=Hi, I'd like to know more about Training World", "_blank");
-  };
-
-  const handleCall = () => {
-    window.location.href = "tel:+919999999999";
-  };
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -46,7 +39,10 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="text-white font-bold text-xl uppercase tracking-wider">
+          <Link
+            to="/"
+            className="text-white font-bold text-xl uppercase tracking-wider"
+          >
             Training World
           </Link>
 
@@ -57,7 +53,9 @@ const Navigation = () => {
                 key={link.path}
                 to={link.path}
                 className={`text-white text-xs uppercase tracking-wider font-semibold hover:text-white/70 transition-colors ${
-                  location.pathname === link.path ? "border-b-2 border-white" : ""
+                  location.pathname === link.path
+                    ? "border-b-2 border-white"
+                    : ""
                 }`}
               >
                 {link.name}
@@ -75,7 +73,11 @@ const Navigation = () => {
             >
               <Phone className="h-5 w-5" />
             </Button>
-            <Button variant="whatsapp" onClick={handleWhatsApp} className="gap-2">
+            <Button
+              variant="whatsapp"
+              onClick={handleWhatsApp}
+              className="gap-2"
+            >
               <MessageCircle className="h-4 w-4" />
               WhatsApp Us
             </Button>
@@ -100,7 +102,9 @@ const Navigation = () => {
                   key={link.path}
                   to={link.path}
                   className={`text-white text-sm uppercase tracking-wider font-semibold hover:text-white/70 transition-colors py-2 ${
-                    location.pathname === link.path ? "border-l-4 border-white pl-4" : "pl-4"
+                    location.pathname === link.path
+                      ? "border-l-4 border-white pl-4"
+                      : "pl-4"
                   }`}
                 >
                   {link.name}
