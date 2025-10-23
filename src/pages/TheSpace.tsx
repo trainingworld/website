@@ -6,8 +6,11 @@ import {
   Dumbbell,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import heroSpace from "@/assets/hero-space.jpg";
-import { handleWhatsApp } from "@/lib/utils";
+import { handleWhatsAppTrainingWorld } from "@/lib/utils";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { useState } from "react";
 
 const TheSpace = () => {
   const exercises = [
@@ -20,7 +23,18 @@ const TheSpace = () => {
     "Rowing",
     "Sprint drills",
     "Weighted workouts",
+    "Functional Cardio",
   ];
+
+  // Create a mapping of exercise names to placeholder images
+  const exerciseImages = exercises.reduce((acc, exercise, index) => {
+    acc[
+      exercise
+    ] = `https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&crop=center&auto=format&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`;
+    return acc;
+  }, {} as Record<string, string>);
+
+  const [selectedExercise, setSelectedExercise] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen">
@@ -71,10 +85,10 @@ const TheSpace = () => {
 
               <Button
                 variant="whatsapp"
-                onClick={handleWhatsApp}
+                onClick={handleWhatsAppTrainingWorld}
                 className="gap-2"
               >
-                <MessageCircle className="h-4 w-4" />
+                <WhatsAppIcon />
                 Book a Visit
               </Button>
             </div>
@@ -121,26 +135,49 @@ const TheSpace = () => {
             <h2>Exercises & Training</h2>
             <p className="text-white/70 mt-4 max-w-2xl mx-auto">
               One can easily work on a variety of functional movements and
-              exercises
+              exercises, click on the exercise to learn more about them!
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
             {exercises.map((exercise, index) => (
-              <div
-                key={index}
-                className="border border-white/20 p-6 text-center hover:border-white/60 hover:bg-white/5 transition-all duration-300"
-              >
-                <p className="text-sm font-semibold uppercase tracking-wide">
-                  {exercise}
-                </p>
-              </div>
+              <Dialog key={index}>
+                <DialogTrigger asChild>
+                  <div
+                    className={`border border-white/20 p-6 text-center hover:border-white/60 hover:bg-white/5 transition-all duration-300 cursor-pointer ${
+                      index === exercises.length - 1 &&
+                      exercises.length % 3 === 1
+                        ? "md:col-start-2"
+                        : ""
+                    }`}
+                    onClick={() => setSelectedExercise(exercise)}
+                  >
+                    <p className="text-sm font-semibold uppercase tracking-wide">
+                      {exercise}
+                    </p>
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl w-full p-0 bg-black border-white/20">
+                  <div className="relative">
+                    <img
+                      src={exerciseImages[exercise]}
+                      alt={exercise}
+                      className="w-full h-auto max-h-[80vh] object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                      <h3 className="text-white text-xl font-semibold uppercase tracking-wide">
+                        {exercise}
+                      </h3>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
 
           <div className="border-t border-white/20 pt-16">
-            <h3 className="text-2xl mb-6 text-center">Our Philosophy</h3>
-            <div className="max-w-3xl mx-auto space-y-4 text-white/70 text-center">
+            <h3 className="text-2xl mb-8 text-center">Our Philosophy</h3>
+            <div className="max-w-3xl mx-auto space-y-3 text-white/70 text-center">
               <p className="leading-relaxed">
                 Training World focuses on the classical free weight method of
                 training.
@@ -161,17 +198,17 @@ const TheSpace = () => {
       <section className="py-24 px-4 bg-muted">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="mb-6">Experience the Space</h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-xl text-muted-foreground mb-8 max-w-lg mx-auto">
             Visit us and see why Training World is different from any gym you've
             been to.
           </p>
           <Button
             variant="whatsapp"
             size="lg"
-            onClick={handleWhatsApp}
+            onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon />
             Schedule a Tour on WhatsApp
           </Button>
         </div>
