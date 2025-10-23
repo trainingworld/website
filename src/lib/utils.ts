@@ -19,6 +19,10 @@ export const handleWhatsAppTrainingWorld = () => {
   );
 };
 
+export const handleWhatsApp = () => {
+  alert("WhatsApp is not available yet");
+};
+
 export const handleCall = () => {
   window.location.href = "tel:+917838526644";
 };
