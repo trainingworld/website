@@ -71,6 +71,7 @@ const Navigation = () => {
             </Button>
             <Button
               variant="whatsapp"
+              size="sm"
               onClick={handleWhatsApp}
               className="gap-2"
             >

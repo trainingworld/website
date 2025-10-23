@@ -26,7 +26,7 @@ const Home = () => {
           </p>
           <Button
             variant="whatsapp"
-            size="lg"
+            size="default"
             onClick={handleWhatsApp}
             className="gap-3"
           >
