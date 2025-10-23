@@ -5,7 +5,14 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const handleWhatsApp = () => {
+export const handleWhatsAppHyrox = () => {
+  window.open(
+    "https://wa.me/917838526644?text=Hi, I'd like to know more about Hyrox!",
+    "_blank"
+  );
+};
+
+export const handleWhatsAppTrainingWorld = () => {
   window.open(
     "https://wa.me/917838526644?text=Hi, I'd like to know more about Training World!",
     "_blank"

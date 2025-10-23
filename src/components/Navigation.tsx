@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Button } from "./ui/button";
-import { handleWhatsApp, handleCall } from "@/lib/utils";
+import { handleWhatsAppTrainingWorld, handleCall } from "@/lib/utils";
 import Logo from "./Logo";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,17 +66,18 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={handleCall}
-              className="text-white hover:bg-white/10"
+              className="text-white hover:bg-white/10 hover:text-white"
             >
               <Phone className="h-5 w-5" />
             </Button>
+
             <Button
               variant="whatsapp"
               size="sm"
-              onClick={handleWhatsApp}
+              onClick={handleWhatsAppTrainingWorld}
               className="gap-2"
             >
-              <MessageCircle className="h-4 w-4" />
+              <WhatsAppIcon />
               WhatsApp Us
             </Button>
           </div>
@@ -120,11 +122,11 @@ const Navigation = () => {
                 <Button
                   variant="whatsapp"
                   size="sm"
-                  onClick={handleWhatsApp}
+                  onClick={handleWhatsAppTrainingWorld}
                   className="flex-1"
                 >
                   <MessageCircle className="h-4 w-4 mr-2" />
-                  WhatsApp
+                  WhatsApp Us
                 </Button>
               </div>
             </div>

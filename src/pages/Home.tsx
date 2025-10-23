@@ -1,7 +1,8 @@
 import { MessageCircle, Award, Users, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroHome from "@/assets/hero-home.jpg";
-import { handleWhatsApp } from "@/lib/utils";
+import { handleWhatsAppHyrox, handleWhatsAppTrainingWorld } from "@/lib/utils";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const Home = () => {
   return (
@@ -19,7 +20,7 @@ const Home = () => {
           <div className="text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2 mb-12">
             Official{" "}
             <img
-              src="/HYROX-Logo.svg"
+              src="/logos/HYROX-Logo.svg"
               alt="Hyrox Training Club"
               className="h-4 sm:inline-block"
             />{" "}
@@ -30,15 +31,26 @@ const Home = () => {
             Bespoke fitness training designed around your lifestyle. No
             judgement, no crowd, just focused training that works for you.
           </p>
-          <Button
-            variant="whatsapp"
-            size="default"
-            onClick={handleWhatsApp}
-            className="gap-3"
-          >
-            <MessageCircle className="h-5 w-5" />
-            Message Us on WhatsApp
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              variant="outline"
+              size="default"
+              onClick={handleWhatsAppHyrox}
+              className="gap-3"
+            >
+              <WhatsAppIcon />
+              Learn about Hyrox
+            </Button>
+            <Button
+              variant="whatsapp"
+              size="default"
+              onClick={handleWhatsAppTrainingWorld}
+              className="gap-3"
+            >
+              <WhatsAppIcon />
+              Learn about Training World
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -165,7 +177,7 @@ const Home = () => {
           <Button
             variant="whatsapp"
             size="lg"
-            onClick={handleWhatsApp}
+            onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
           >
             <MessageCircle className="h-5 w-5" />

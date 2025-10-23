@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-xs font-bold uppercase tracking-wide ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center rounded justify-center gap-2 whitespace-nowrap text-xs font-bold uppercase tracking-wide ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -14,7 +14,7 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground",
+          "border-2 border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:scale-105",
         ghost: "hover:bg-accent hover:text-accent-foreground",
@@ -23,6 +23,8 @@ const buttonVariants = cva(
         cta: "bg-black text-white border-2 border-black hover:bg-white hover:text-black px-12 py-4 text-sm",
         whatsapp:
           "bg-[#25D366] text-white hover:bg-[#20BA5A] shadow-lg hover:shadow-xl hover:scale-105",
+        whatsappSecondary:
+          "bg-transparent text-[#25D366] border-2 border-[#25D366] hover:bg-[#25D366] hover:text-white shadow-lg hover:shadow-xl hover:scale-105",
       },
       size: {
         default: "h-12 px-6 py-3",
