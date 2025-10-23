@@ -15,9 +15,15 @@ const Home = () => {
           <div className="absolute inset-0 bg-black/60" />
         </div>
 
-        <div className="relative z-10 text-center text-white px-4 max-w-5xl animate-fade-in">
-          <div className="mb-4 text-xs uppercase tracking-widest font-semibold">
-            Official Hyrox Training Club
+        <div className="relative z-10 text-center text-white px-4 max-w-5xl animate-fade-in ">
+          <div className="text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2 mb-12">
+            Official{" "}
+            <img
+              src="/HYROX-Logo.svg"
+              alt="Hyrox Training Club"
+              className="h-4 sm:inline-block"
+            />{" "}
+            Training Club
           </div>
           <h1 className="mb-6">Training World</h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
