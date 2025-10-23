@@ -1,4 +1,12 @@
-import { MessageCircle, Award, Users, Target } from "lucide-react";
+import {
+  MessageCircle,
+  Award,
+  Users,
+  Target,
+  Hash,
+  Locate,
+  MapPin,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroHome from "@/assets/hero-home.jpg";
 import { handleWhatsAppHyrox, handleWhatsAppTrainingWorld } from "@/lib/utils";
@@ -48,7 +56,7 @@ const Home = () => {
               className="gap-3"
             >
               <WhatsAppIcon />
-              Learn about Training World
+              Workout at Training World
             </Button>
           </div>
         </div>
@@ -105,6 +113,7 @@ const Home = () => {
                 </p>
               </div>
               <div className="bg-black text-white p-8 hover:scale-105 transition-transform duration-300">
+                <MapPin className="h-10 w-10 mb-4" />
                 <div className="text-4xl font-bold mb-2">3000</div>
                 <p className="text-sm text-white/70">Sq ft training space</p>
               </div>
@@ -117,10 +126,10 @@ const Home = () => {
       <section className="py-24 px-4 bg-black text-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <div className="text-xs uppercase tracking-widest font-semibold mb-4">
+            {/* <div className="text-xs uppercase tracking-widest font-semibold mb-4">
               What We Do
-            </div>
-            <h2>Training That Works For You</h2>
+            </div> */}
+            <h2>What We Do</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -170,7 +179,7 @@ const Home = () => {
       <section className="py-24 px-4 bg-muted">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="mb-6">Ready to Transform?</h2>
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+          <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-lg mx-auto">
             Message us on WhatsApp to discuss your fitness goals and book your
             first session.
           </p>
@@ -180,7 +189,7 @@ const Home = () => {
             onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon />
             Get Started on WhatsApp
           </Button>
         </div>
