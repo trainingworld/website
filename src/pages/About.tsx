@@ -1,7 +1,7 @@
 import { MessageCircle, Award, Trophy, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroAbout from "@/assets/hero-about.jpg";
-import { handleWhatsApp } from "@/lib/utils";
+import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 
 const About = () => {
   return (
@@ -17,11 +17,11 @@ const About = () => {
 
         <div className="relative z-10 text-center text-white px-4 max-w-4xl animate-fade-in">
           <div className="mb-4 text-xs uppercase tracking-widest font-semibold">
-            Founder & Coach
+            Founder & Lead Coach
           </div>
           <h1>Richard Paiva</h1>
           <p className="text-lg md:text-xl mt-6 leading-relaxed">
-            Athlete, Coach, Fitness Enthusiast
+            Athlete, Coach, Fitness Guide
           </p>
         </div>
       </section>
@@ -65,32 +65,34 @@ const About = () => {
           {/* Achievements Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div className="border-2 border-black p-8 hover:bg-black hover:text-white transition-all duration-300 group">
-              <Trophy className="h-10 w-10 mb-4 group-hover:text-white" />
-              <h3 className="mb-2">Football</h3>
-              <p className="text-sm opacity-70">National Level U-19 Player</p>
+              <Heart className="h-10 w-10 mb-4 group-hover:text-white" />
+              <h3 className="mb-2">Endurance Sports Football</h3>
+              <p className="text-sm opacity-70">
+                Multiple Half-Marathons & IRONMAN 113km Triathlons
+              </p>
             </div>
 
             <div className="bg-black text-white p-8 hover:scale-105 transition-transform duration-300">
-              <Award className="h-10 w-10 mb-4" />
+              <Trophy className="h-10 w-10 mb-4" />
+              <h3 className="mb-2">Football</h3>
+              <p className="text-sm text-white/70">
+                National Level U-19 Player
+              </p>
+            </div>
+
+            <div className="bg-black text-white p-8 hover:scale-105 transition-transform duration-300">
+              <Trophy className="h-10 w-10 mb-4" />
               <h3 className="mb-2">Badminton</h3>
               <p className="text-sm text-white/70">
                 Regional Level U-17 Player
               </p>
             </div>
 
-            <div className="bg-black text-white p-8 hover:scale-105 transition-transform duration-300">
-              <Trophy className="h-10 w-10 mb-4" />
-              <h3 className="mb-2">Field Athlete</h3>
-              <p className="text-sm text-white/70">
-                Regional Shot-put & Discus Throw
-              </p>
-            </div>
-
             <div className="border-2 border-black p-8 hover:bg-black hover:text-white transition-all duration-300 group">
-              <Heart className="h-10 w-10 mb-4 group-hover:text-white" />
-              <h3 className="mb-2">Endurance Sports</h3>
+              <Award className="h-10 w-10 mb-4 group-hover:text-white" />
+              <h3 className="mb-2">Field Athlete</h3>
               <p className="text-sm opacity-70">
-                Multiple Half-Marathons & IRONMAN 113km Triathlons
+                Regional Shot-put & Discus Throw
               </p>
             </div>
           </div>
@@ -149,7 +151,7 @@ const About = () => {
           <Button
             variant="whatsapp"
             size="lg"
-            onClick={handleWhatsApp}
+            onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
           >
             <MessageCircle className="h-5 w-5" />
