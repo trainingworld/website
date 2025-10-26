@@ -2,6 +2,7 @@ import { MessageCircle, Heart, Users, Target, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroWhoNeedsUs from "@/assets/hero-who-needs-us.jpg";
 import { handleWhatsApp } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 const WhoNeedsUs = () => {
   return (
@@ -90,14 +91,14 @@ const WhoNeedsUs = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="text-xs uppercase tracking-widest font-semibold mb-4">
-              Our Community
+              Our Clients
             </div>
-            <h2>You Might Be...</h2>
+            <h2>You Might Be</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="border border-white/20 p-8 hover:border-white/40 transition-colors duration-300">
-              <h3 className="mb-4">The Introvert</h3>
+              <h3 className="mb-4">An Introvert</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 You prefer a quiet workout rather than the social side of
                 fitness. You want to focus on training without distraction or
@@ -106,7 +107,7 @@ const WhoNeedsUs = () => {
             </div>
 
             <div className="border border-white/20 p-8 hover:border-white/40 transition-colors duration-300">
-              <h3 className="mb-4">The Self-Conscious</h3>
+              <h3 className="mb-4">Self-Conscious</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 You're conscious of your body type and prefer wearing loose
                 exercise attire. You want a no-judgement space where you can
@@ -115,7 +116,7 @@ const WhoNeedsUs = () => {
             </div>
 
             <div className="border border-white/20 p-8 hover:border-white/40 transition-colors duration-300">
-              <h3 className="mb-4">The Confident</h3>
+              <h3 className="mb-4">Confident</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 You feel great about yourself and carry that confidence on the
                 training floor. You want professional guidance to reach the next
@@ -124,7 +125,7 @@ const WhoNeedsUs = () => {
             </div>
 
             <div className="border border-white/20 p-8 hover:border-white/40 transition-colors duration-300">
-              <h3 className="mb-4">The Busy Professional</h3>
+              <h3 className="mb-4">A Busy Professional</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 You have limited time and need efficient, effective workouts
                 that fit your schedule and deliver results.
@@ -132,7 +133,7 @@ const WhoNeedsUs = () => {
             </div>
 
             <div className="border border-white/20 p-8 hover:border-white/40 transition-colors duration-300">
-              <h3 className="mb-4">The Athlete</h3>
+              <h3 className="mb-4">An Athlete</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 You're training for marathons, triathlons, or endurance events.
                 You need specialized programming and expert guidance.
@@ -140,7 +141,7 @@ const WhoNeedsUs = () => {
             </div>
 
             <div className="border border-white/20 p-8 hover:border-white/40 transition-colors duration-300">
-              <h3 className="mb-4">The Beginner</h3>
+              <h3 className="mb-4">A Beginner</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 You're new to fitness and need a supportive environment to learn
                 proper form and build healthy habits that last.
@@ -154,6 +155,9 @@ const WhoNeedsUs = () => {
               unflinchingly - is on providing you the kind of workout most
               suited for you.
             </p>
+            <Button variant="outline" className="flex mx-auto mt-8 flex-1">
+              <Link to={"/about"}>Hear from the Coach</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -162,7 +166,7 @@ const WhoNeedsUs = () => {
       <section className="py-24 px-4 bg-muted">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="mb-6">Find Your Fit</h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-xl text-muted-foreground mb-8 max-w-lg mx-auto">
             No matter who you are or where you're starting from, we're here to
             support your journey.
           </p>
