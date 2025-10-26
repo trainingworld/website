@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import heroHome from "@/assets/hero-home.jpg";
 import { handleWhatsAppHyrox, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -172,6 +173,9 @@ const Home = () => {
               </ul>
             </div>
           </div>
+          <Button variant="outline" className="flex mx-auto mt-8 flex-1">
+            <Link to={"/the-space"}>Check out the Space</Link>
+          </Button>
         </div>
       </section>
 
