@@ -90,29 +90,29 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-black text-white p-8 hover:scale-105 transition-transform duration-300">
+            <div className="grid grid-cols-2 gap-3 sm:gap-6">
+              <div className="bg-black text-white p-4 sm:p-8 hover:scale-105 transition-transform duration-300">
                 <Award className="h-10 w-10 mb-4" />
                 <h3 className="text-lg mb-2">Official Hyrox Club</h3>
                 <p className="text-sm text-white/70">
                   Certified training partner
                 </p>
               </div>
-              <div className="bg-muted p-8 hover:scale-105 transition-transform duration-300">
+              <div className="bg-muted p-4 sm:p-8 hover:scale-105 transition-transform duration-300">
                 <Users className="h-10 w-10 mb-4" />
                 <h3 className="text-lg mb-2">No Judgement</h3>
                 <p className="text-sm text-muted-foreground">
                   All shapes & sizes welcome
                 </p>
               </div>
-              <div className="bg-muted p-8 hover:scale-105 transition-transform duration-300">
+              <div className="bg-muted p-4 sm:p-8 hover:scale-105 transition-transform duration-300">
                 <Target className="h-10 w-10 mb-4" />
                 <h3 className="text-lg mb-2">Bespoke Programs</h3>
                 <p className="text-sm text-muted-foreground">
                   Tailored to your goals
                 </p>
               </div>
-              <div className="bg-black text-white p-8 hover:scale-105 transition-transform duration-300">
+              <div className="bg-black text-white p-4 sm:p-8 hover:scale-105 transition-transform duration-300">
                 <MapPin className="h-10 w-10 mb-4" />
                 <div className="text-4xl font-bold mb-2">3000</div>
                 <p className="text-sm text-white/70">Sq ft training space</p>
