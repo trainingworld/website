@@ -26,13 +26,29 @@ const TheSpace = () => {
     "Functional Cardio",
   ];
 
-  // Create a mapping of exercise names to placeholder images
-  const exerciseImages = exercises.reduce((acc, exercise, index) => {
-    acc[
-      exercise
-    ] = `https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&crop=center&auto=format&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`;
-    return acc;
-  }, {} as Record<string, string>);
+  // Create a mapping of exercise names to actual exercise images
+  const exerciseImages = {
+    "Lunge walks":
+      "https://plus.unsplash.com/premium_photo-1663050848227-c272a44b4b8d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    "Burpee broad jumps":
+      "https://cdn.mos.cms.futurecdn.net/fS6KSNRUCamBX8Yz3AiteG.jpg",
+    "Sled pull and push":
+      "https://thetibbarguy.com/cdn/shop/files/The_Push-Pull_Sled_FAQ.jpg?v=1744134913",
+    "Wall balls":
+      "https://troyfitness.com/cdn/shop/articles/3_1000x.png?v=1640629112",
+    "Farmer carry":
+      "https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2019/04/5MovesCoreAbDumbellFarmersWalk0.jpg?quality=86&strip=all",
+    "Treadmill runs":
+      "https://runnerslab.com/wp-content/uploads/2022/08/how_to_run_on_a_treadmill.jpg",
+    Rowing:
+      "https://www.britishrowing.org/wp-content/uploads/2023/04/What-is-rowing-Lea-Crew.jpg",
+    "Sprint drills":
+      "https://fastandfittraining.com/wp-content/uploads/RodDaveWarmup.jpg",
+    "Weighted workouts":
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK9HEySHtvc3IeWJULeJa-j5_3-3innKsrZA&s",
+    "Functional Cardio":
+      "https://www.endomondo.com/wp-content/uploads/2024/12/Improve-Functional-Ability-endomondo.jpg",
+  };
 
   const [selectedExercise, setSelectedExercise] = useState<string | null>(null);
 
@@ -135,7 +151,7 @@ const TheSpace = () => {
             <h2>Exercises & Training</h2>
             <p className="text-white/70 mt-4 max-w-2xl mx-auto">
               One can easily work on a variety of functional movements and
-              exercises, click on the exercise to learn more about them!
+              exercises. Click on the exercise to learn more about them!
             </p>
           </div>
 
