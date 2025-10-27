@@ -11,6 +11,7 @@ import heroSpace from "@/assets/hero-space.jpg";
 import { handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
 
 const TheSpace = () => {
   const exercises = [
@@ -64,9 +65,9 @@ const TheSpace = () => {
         </div>
 
         <div className="relative z-10 text-center text-white px-4 max-w-4xl animate-fade-in">
-          <div className="mb-4 text-xs uppercase tracking-widest font-semibold">
+          <Badge variant="outline" className="mb-4">
             The Facility
-          </div>
+          </Badge>
           <h1>The Space</h1>
           <p className="text-lg md:text-xl mt-6 leading-relaxed">
             Delhi NCR's only state-of-the-art indoor free space training area

@@ -4,6 +4,7 @@ import heroWhoNeedsUs from "@/assets/hero-who-needs-us.jpg";
 import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { Badge } from "@/components/ui/badge";
 
 const WhoNeedsUs = () => {
   return (
@@ -18,9 +19,9 @@ const WhoNeedsUs = () => {
         </div>
 
         <div className="relative z-10 text-center text-white px-4 max-w-4xl animate-fade-in">
-          <div className="mb-4 text-xs uppercase tracking-widest font-semibold">
+          <Badge variant="outline" className="mb-4">
             For Everyone
-          </div>
+          </Badge>
           <h1>Who Needs Us</h1>
           <p className="text-lg md:text-xl mt-6 leading-relaxed">
             Different people, different goals, same commitment to your success

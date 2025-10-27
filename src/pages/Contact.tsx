@@ -14,6 +14,7 @@ import {
   handleWhatsAppTrainingWorld,
 } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { Badge } from "@/components/ui/badge";
 
 const Contact = () => {
   const FAQs = [
@@ -49,9 +50,9 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="relative bg-black text-white py-32 px-4">
         <div className="container mx-auto max-w-4xl text-center animate-fade-in">
-          <div className="mb-4 text-xs uppercase tracking-widest font-semibold">
+          <Badge variant="outline" className="mb-4">
             Get In Touch
-          </div>
+          </Badge>
           <h1>Contact Us</h1>
           <p className="text-lg md:text-xl mt-6 leading-relaxed text-white/80">
             Ready to transform your fitness journey? Reach out and let's talk.

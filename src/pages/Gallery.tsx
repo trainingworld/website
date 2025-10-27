@@ -2,6 +2,7 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { Badge } from "@/components/ui/badge";
 
 const Gallery = () => {
   // Placeholder for gallery images - user will upload their own later
@@ -12,9 +13,9 @@ const Gallery = () => {
       {/* Hero Section */}
       <section className="relative bg-black text-white py-32 px-4">
         <div className="container mx-auto max-w-4xl text-center animate-fade-in">
-          <div className="mb-4 text-xs uppercase tracking-widest font-semibold">
+          <Badge variant="outline" className="mb-4">
             Our Facility
-          </div>
+          </Badge>
           <h1>Gallery</h1>
           <p className="text-lg md:text-xl mt-6 leading-relaxed text-white/80">
             Get a glimpse of our state-of-the-art training space

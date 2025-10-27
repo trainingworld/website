@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import heroAbout from "@/assets/hero-about.jpg";
 import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { Badge } from "@/components/ui/badge";
 
 const About = () => {
   return (
@@ -17,9 +18,9 @@ const About = () => {
         </div>
 
         <div className="relative z-10 text-center text-white px-4 max-w-4xl animate-fade-in">
-          <div className="mb-4 text-xs uppercase tracking-widest font-semibold">
+          <Badge variant="outline" className="mb-4">
             Founder & Lead Coach
-          </div>
+          </Badge>
           <h1>Richard Paiva</h1>
           <p className="text-lg md:text-xl mt-6 leading-relaxed">
             Athlete, Coach, Fitness Guide
