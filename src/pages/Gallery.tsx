@@ -1,6 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { handleWhatsApp } from "@/lib/utils";
+import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const Gallery = () => {
   // Placeholder for gallery images - user will upload their own later
@@ -22,13 +23,13 @@ const Gallery = () => {
       </section>
 
       {/* Coming Soon Notice */}
-      <section className="py-12 px-4 bg-muted">
+      {/* <section className="py-12 px-4 bg-muted">
         <div className="container mx-auto max-w-4xl text-center">
           <p className="text-sm uppercase tracking-wider font-semibold">
             Brand photos coming soon - placeholder fitness imagery shown
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Gallery Grid */}
       <section className="py-24 px-4 bg-white">
@@ -116,17 +117,17 @@ const Gallery = () => {
       <section className="py-24 px-4 bg-muted">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="mb-6">See It For Yourself</h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-xl text-muted-foreground mb-8 max-w-lg mx-auto">
             Schedule a tour and experience the Training World difference in
             person.
           </p>
           <Button
             variant="whatsapp"
             size="lg"
-            onClick={handleWhatsApp}
+            onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon />
             Book a Tour on WhatsApp
           </Button>
         </div>

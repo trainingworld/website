@@ -1,8 +1,9 @@
 import { MessageCircle, Heart, Users, Target, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroWhoNeedsUs from "@/assets/hero-who-needs-us.jpg";
-import { handleWhatsApp } from "@/lib/utils";
+import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import { Link } from "react-router-dom";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const WhoNeedsUs = () => {
   return (
@@ -173,10 +174,10 @@ const WhoNeedsUs = () => {
           <Button
             variant="whatsapp"
             size="lg"
-            onClick={handleWhatsApp}
+            onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon />
             Chat With Us on WhatsApp
           </Button>
         </div>

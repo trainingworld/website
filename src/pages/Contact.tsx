@@ -1,9 +1,49 @@
 import { MessageCircle, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-import { handleWhatsApp, handleCall, handleEmail } from "@/lib/utils";
+import {
+  handleWhatsApp,
+  handleCall,
+  handleEmail,
+  handleWhatsAppTrainingWorld,
+} from "@/lib/utils";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const Contact = () => {
+  const FAQs = [
+    {
+      question: "Do I need prior fitness experience?",
+      answer:
+        "Not at all! We work with people at all fitness levels, from complete beginners to experienced athletes. Our programs are fully customized to your current fitness level.",
+    },
+    {
+      question: "How many people train at once?",
+      answer:
+        "We limit entries per hour to maintain a focused, non-crowded environment. This ensures you get the attention and space you need.",
+    },
+    {
+      question: "What should I bring for my first session?",
+      answer:
+        "Just bring comfortable workout clothes, indoor training shoes, a water bottle, and a towel. We provide all equipment.",
+    },
+    {
+      question: "Do you offer online training?",
+      answer:
+        "While our primary focus is in-person training at our facility, we can discuss customized programs for your specific needs. Message us to learn more.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply send us a message on WhatsApp or give us a call. We'll discuss your goals, schedule a tour of the facility, and create a personalized plan for you.",
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -34,10 +74,10 @@ const Contact = () => {
               <Button
                 variant="whatsapp"
                 size="lg"
-                onClick={handleWhatsApp}
+                onClick={handleWhatsAppTrainingWorld}
                 className="gap-3"
               >
-                <MessageCircle className="h-5 w-5" />
+                <WhatsAppIcon />
                 Start WhatsApp Chat
               </Button>
             </div>
@@ -54,17 +94,17 @@ const Contact = () => {
                 variant="outline"
                 size="lg"
                 onClick={handleCall}
-                className="gap-3 group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-black"
+                className="border-black text-black gap-3 group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-black"
               >
                 <Phone className="h-5 w-5" />
-                +91 99999 99999
+                +91 78385 26644
               </Button>
             </div>
           </div>
 
           {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* <div className="text-center p-8">
               <Mail className="h-10 w-10 mx-auto mb-4" />
               <h3 className="mb-3">Email</h3>
               <button
@@ -73,22 +113,41 @@ const Contact = () => {
               >
                 info@trainingworld.com
               </button>
-            </div>
+            </div> */}
 
             <div className="text-center p-8">
               <MapPin className="h-10 w-10 mx-auto mb-4" />
               <h3 className="mb-3">Location</h3>
-              <p className="text-muted-foreground text-sm">Delhi NCR, India</p>
+              <p className="text-muted-foreground text-sm">
+                Safdarjung Enclave, <br />
+                New Delhi, India
+              </p>
             </div>
 
             <div className="text-center p-8">
               <Clock className="h-10 w-10 mx-auto mb-4" />
               <h3 className="mb-3">Hours</h3>
               <p className="text-muted-foreground text-sm">
-                Mon - Sat: 6:00 AM - 9:00 PM
-                <br />
-                Sun: By Appointment
+                Open all days <br />
+                7:00 AM - 9:90 PM
               </p>
+            </div>
+          </div>
+
+          {/* Google Map */}
+          <div className="mt-16">
+            <h3 className="text-center mb-8">Find Us</h3>
+            <div className="w-full h-[450px] rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.3304869030503!2d77.1916372!3d28.5598371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d8908e7f08f%3A0x568dc48a4bac4537!2sThe%20Art%20Of%20Sport!5e0!3m2!1sen!2sin!4v1761543024303!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -104,53 +163,27 @@ const Contact = () => {
             <h2>Frequently Asked Questions</h2>
           </div>
 
-          <div className="space-y-8">
-            <div className="border-b border-white/20 pb-8">
-              <h3 className="mb-3">Do I need prior fitness experience?</h3>
-              <p className="text-white/70 leading-relaxed">
-                Not at all! We work with people at all fitness levels, from
-                complete beginners to experienced athletes. Our programs are
-                fully customized to your current fitness level.
-              </p>
-            </div>
-
-            <div className="border-b border-white/20 pb-8">
-              <h3 className="mb-3">How many people train at once?</h3>
-              <p className="text-white/70 leading-relaxed">
-                We limit entries per hour to maintain a focused, non-crowded
-                environment. This ensures you get the attention and space you
-                need.
-              </p>
-            </div>
-
-            <div className="border-b border-white/20 pb-8">
-              <h3 className="mb-3">
-                What should I bring for my first session?
-              </h3>
-              <p className="text-white/70 leading-relaxed">
-                Just bring comfortable workout clothes, indoor training shoes, a
-                water bottle, and a towel. We provide all equipment.
-              </p>
-            </div>
-
-            <div className="border-b border-white/20 pb-8">
-              <h3 className="mb-3">Do you offer online training?</h3>
-              <p className="text-white/70 leading-relaxed">
-                While our primary focus is in-person training at our facility,
-                we can discuss customized programs for your specific needs.
-                Message us to learn more.
-              </p>
-            </div>
-
-            <div className="pb-8">
-              <h3 className="mb-3">How do I get started?</h3>
-              <p className="text-white/70 leading-relaxed">
-                Simply send us a message on WhatsApp or give us a call. We'll
-                discuss your goals, schedule a tour of the facility, and create
-                a personalized plan for you.
-              </p>
-            </div>
-          </div>
+          <Accordion
+            type="single"
+            collapsible
+            defaultValue="item-0"
+            className="space-y-4"
+          >
+            {FAQs.map((faq, index) => (
+              <AccordionItem
+                value={`item-${index}`}
+                key={index}
+                className="border-white/20"
+              >
+                <AccordionTrigger className="text-left py-4 hover:text-white/80">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-white/70 leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 
@@ -158,16 +191,16 @@ const Contact = () => {
       <section className="py-24 px-4 bg-muted">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="mb-6">Ready to Begin?</h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-xl text-muted-foreground mb-8 max-w-lg mx-auto">
             Don't wait. Your fitness journey starts with a simple message.
           </p>
           <Button
             variant="whatsapp"
             size="lg"
-            onClick={handleWhatsApp}
+            onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon />
             Get Started on WhatsApp
           </Button>
         </div>

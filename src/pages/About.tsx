@@ -2,6 +2,7 @@ import { MessageCircle, Award, Trophy, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroAbout from "@/assets/hero-about.jpg";
 import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const About = () => {
   return (
@@ -142,9 +143,9 @@ const About = () => {
 
       {/* CTA */}
       <section className="py-24 px-4 bg-muted">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto text-center">
           <h2 className="mb-6">Let's Work Together</h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-xl text-muted-foreground mb-8 max-w-lg mx-auto">
             Ready to start your personalized fitness journey? Let's discuss your
             goals.
           </p>
@@ -154,7 +155,7 @@ const About = () => {
             onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon />
             Message Richard on WhatsApp
           </Button>
         </div>
