@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 
-import { handleWhatsApp } from "@/lib/utils";
+import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import Logo from "./Logo";
+import WhatsAppIcon from "./WhatsAppIcon";
+import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
@@ -82,7 +84,7 @@ const Footer = () => {
                   +91 78385 26644
                 </a>
               </li>
-              <li className="flex items-start gap-3">
+              {/* <li className="flex items-start gap-3">
                 <Mail className="h-4 w-4 mt-1 flex-shrink-0" />
                 <a
                   href="mailto:info@trainingworld.com"
@@ -90,10 +92,13 @@ const Footer = () => {
                 >
                   info@trainingworld.com
                 </a>
-              </li>
+              </li> */}
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
-                <span className="text-white/70 text-sm">Delhi NCR, India</span>
+                <span className="text-white/70 text-sm">
+                  Safdarjung Enclave,
+                  <br /> New Delhi, India
+                </span>
               </li>
             </ul>
           </div>
@@ -106,13 +111,14 @@ const Footer = () => {
             <p className="text-white/70 text-sm mb-4">
               Ready to transform your fitness journey? Message us on WhatsApp.
             </p>
-            <button
-              onClick={handleWhatsApp}
-              className="bg-[#25D366] text-white px-6 py-3 text-xs font-bold uppercase tracking-wide hover:bg-[#20BA5A] transition-all hover:scale-105 flex items-center gap-2 shadow-lg"
+            <Button
+              onClick={handleWhatsAppTrainingWorld}
+              variant="whatsapp"
+              size="sm"
             >
-              <MessageCircle className="h-4 w-4" />
+              <WhatsAppIcon />
               WhatsApp Us
-            </button>
+            </Button>
           </div>
         </div>
 
