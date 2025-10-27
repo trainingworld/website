@@ -17,6 +17,7 @@ import {
   SheetTitle,
   SheetDescription,
 } from "./ui/sheet";
+import WhatsAppSidebar from "./WhatsAppSidebar";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +53,15 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden text-white p-2"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+
           {/* Logo */}
           <Logo />
 
@@ -91,88 +101,31 @@ const Navigation = () => {
                   WhatsApp Us
                 </Button>
               </SheetTrigger>
-              <SheetContent
-                side="right"
-                className="bg-black text-white sm:max-w-md"
-              >
-                <SheetHeader className="text-left">
-                  <SheetTitle>Get in touch</SheetTitle>
-                  <SheetDescription className="text-white/70 pb-8">
-                    Choose how you'd like to connect with us.
-                  </SheetDescription>
-                </SheetHeader>
-
-                <div className="mt-6 space-y-6">
-                  {/* Section A: Hyrox */}
-                  <div className="space-y-4">
-                    <div className="flex flex-col items-start gap-8">
-                      <img
-                        src="/logos/HYROX-Logo.svg"
-                        alt="HYROX Logo"
-                        className="h-8 w-auto"
-                      />
-                      <div>
-                        {/* <h3 className="text-lg font-semibold">HYROX</h3> */}
-                        <p className="text-sm text-white/70">
-                          The world's fastest growing fitness racing series.
-                          Race against the clock in this unique combination of
-                          running and functional fitness.
-                        </p>
-                      </div>
-                    </div>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={handleWhatsAppHyrox}
-                      className="w-full text-white border-white hover:bg-white hover:text-black"
-                    >
-                      Learn More About HYROX
-                    </Button>
-                  </div>
-
-                  {/* Section B: Training World */}
-                  <div className="space-y-4 pt-16">
-                    <div className="flex flex-col items-start gap-4">
-                      <Logo isCentered={false} />
-                      <div>
-                        {/* <h3 className="text-lg font-semibold">
-                          Training World
-                        </h3> */}
-                        <p className="text-sm text-white/70">
-                          Your premier destination for functional fitness
-                          training, HYROX preparation, and personalized coaching
-                          to help you achieve your goals.
-                        </p>
-                      </div>
-                    </div>
-                    <Button
-                      variant="whatsapp"
-                      size="sm"
-                      onClick={handleWhatsAppTrainingWorld}
-                      className="w-full gap-2"
-                    >
-                      <WhatsAppIcon />
-                      Contact Training World
-                    </Button>
-                  </div>
-                </div>
-              </SheetContent>
+              <WhatsAppSidebar />
             </Sheet>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden text-white p-2"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Phone Whatsapp Menu  */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button
+                className="lg:hidden text-white p-2"
+                variant="ghost"
+                // onClick={() => setIsOpen(!isOpen)}
+                // aria-label="Toggle menu"
+              >
+                <div className="scale-110">
+                  <WhatsAppIcon />
+                </div>
+              </Button>
+            </SheetTrigger>
+            <WhatsAppSidebar />
+          </Sheet>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden bg-black/95 backdrop-blur-sm pb-6 animate-fade-in">
+          <div className="lg:hidden bg-black/95 backdrop-blur-sm pb-6 animate-slide-down">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
