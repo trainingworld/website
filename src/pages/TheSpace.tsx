@@ -76,7 +76,7 @@ const TheSpace = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-24 px-2 sm:px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="animate-fade-in-up">
@@ -227,7 +227,7 @@ const TheSpace = () => {
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                   Morning{" "}
                   <span className="font-normal text-3xl md:text-3xl lg:text-4xl">
-                    Group Sessions
+                    Group Workouts
                   </span>
                 </h2>
                 <div className="mt-6 space-y-2">

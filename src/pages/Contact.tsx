@@ -61,7 +61,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-24 px-2 sm:px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             {/* Primary CTA - WhatsApp */}
