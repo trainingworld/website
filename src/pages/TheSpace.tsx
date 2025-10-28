@@ -213,6 +213,46 @@ const TheSpace = () => {
         </div>
       </section>
 
+      {/* Men's Group Workout Section */}
+      <section className="py-12 sm:py-24 px-0 sm:px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          {/* <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-slate-700 to-slate-800"> */}
+          <div className="relative overflow-hidden rounded-2xl bg-black">
+            <div className="grid lg:grid-cols-3 gap-0">
+              {/* Text Content - Left 2/3 */}
+              <div className="lg:col-span-2 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+                <p className="text-xs md:text-sm uppercase tracking-widest font-semibold text-white/80 mb-4">
+                  Men's Group Training
+                </p>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                  Morning{" "}
+                  <span className="font-normal text-3xl md:text-3xl lg:text-4xl">
+                    Group Sessions
+                  </span>
+                </h2>
+                <div className="mt-6 space-y-2">
+                  <p className="text-white text-lg md:text-xl font-semibold">
+                    Every Tuesday & Friday
+                  </p>
+                  <p className="text-white/90 text-base md:text-lg">
+                    7:45am - 8:45am
+                  </p>
+                </div>
+              </div>
+
+              {/* Image - Right 1/3 */}
+              <div className="lg:col-span-1 relative">
+                <img
+                  src="https://whatsnewinfitness.com.au/wp-content/uploads/benefits-of-group-exercise-for-men.jpg"
+                  alt="Men's group workout"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 px-4 bg-muted">
         <div className="container mx-auto max-w-4xl text-center">
