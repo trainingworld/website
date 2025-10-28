@@ -179,7 +179,7 @@ const WhoNeedsUs = () => {
             className="gap-3"
           >
             <WhatsAppIcon />
-            Chat With Us on WhatsApp
+            Chat With Us
           </Button>
         </div>
       </section>

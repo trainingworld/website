@@ -124,12 +124,12 @@ const Gallery = () => {
           </p>
           <Button
             variant="whatsapp"
-            size="lg"
+            // size="lg"
             onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
           >
             <WhatsAppIcon />
-            Book a Tour on WhatsApp
+            Book a Tour
           </Button>
         </div>
       </section>

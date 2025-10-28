@@ -68,7 +68,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div className="border-2 border-black p-8 hover:bg-black hover:text-white transition-all duration-300 group">
               <Heart className="h-10 w-10 mb-4 group-hover:text-white" />
-              <h3 className="mb-2">Endurance Sports Football</h3>
+              <h3 className="mb-2">Endurance Sports</h3>
               <p className="text-sm opacity-70">
                 Multiple Half-Marathons & IRONMAN 113km Triathlons
               </p>
@@ -152,11 +152,11 @@ const About = () => {
           </p>
           <Button
             variant="whatsapp"
-            size="lg"
+            // size="lg"
             onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
           >
-            <WhatsAppIcon />
+            <WhatsAppIcon className="scale-150" />
             Message Richard on WhatsApp
           </Button>
         </div>

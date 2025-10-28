@@ -65,7 +65,7 @@ const Contact = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             {/* Primary CTA - WhatsApp */}
-            <div className="bg-black text-white p-12 hover:scale-105 transition-transform duration-300">
+            <div className="bg-black text-white p-6 sm:p-12 hover:scale-105 transition-transform duration-300">
               <MessageCircle className="h-12 w-12 mb-6" />
               <h2 className="text-2xl mb-4">Message on WhatsApp</h2>
               <p className="text-white/70 mb-8 leading-relaxed">
@@ -84,7 +84,7 @@ const Contact = () => {
             </div>
 
             {/* Secondary CTA - Call */}
-            <div className="border-2 border-black p-12 hover:bg-black hover:text-white transition-all duration-300 group">
+            <div className="border-2 border-black p-6 sm:p-12 hover:bg-black hover:text-white transition-all duration-300 group">
               <Phone className="h-12 w-12 mb-6 group-hover:text-white" />
               <h2 className="text-2xl mb-4 group-hover:text-white">Call Us</h2>
               <p className="text-muted-foreground group-hover:text-white/70 mb-8 leading-relaxed">
@@ -197,12 +197,12 @@ const Contact = () => {
           </p>
           <Button
             variant="whatsapp"
-            size="lg"
+            // size="lg"
             onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
           >
             <WhatsAppIcon />
-            Get Started on WhatsApp
+            Get Started
           </Button>
         </div>
       </section>

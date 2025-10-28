@@ -111,20 +111,20 @@ const TheSpace = () => {
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="border-2 border-black p-6 hover:bg-black hover:text-white transition-all duration-300 group">
+            <div className="grid grid-cols-2 gap-3 sm:gap-6">
+              <div className="border-2 border-black p-4 sm:p-8 hover:bg-black hover:text-white transition-all duration-300 group">
                 <Wind className="h-8 w-8 mb-4 group-hover:text-white" />
                 <h3 className="text-base mb-2">HEPA Filtered</h3>
                 <p className="text-sm opacity-70">PM2.5 AQI under 30</p>
               </div>
 
-              <div className="bg-black text-white p-6 hover:scale-105 transition-transform duration-300">
+              <div className="bg-black text-white p-4 sm:p-8 hover:scale-105 transition-transform duration-300">
                 <Thermometer className="h-8 w-8 mb-4" />
                 <h3 className="text-base mb-2">Climate Control</h3>
                 <p className="text-sm text-white/70">Optimal temperature</p>
               </div>
 
-              <div className="bg-black text-white p-6 hover:scale-105 transition-transform duration-300">
+              <div className="bg-black text-white p-4 sm:p-8 hover:scale-105 transition-transform duration-300">
                 <Users2 className="h-8 w-8 mb-4" />
                 <h3 className="text-base mb-2">Limited Entry</h3>
                 <p className="text-sm text-white/70">
@@ -132,9 +132,11 @@ const TheSpace = () => {
                 </p>
               </div>
 
-              <div className="border-2 border-black p-6 hover:bg-black hover:text-white transition-all duration-300 group">
+              <div className="border-2 border-black p-4 sm:p-8 hover:bg-black hover:text-white transition-all duration-300 group">
                 <Dumbbell className="h-8 w-8 mb-4 group-hover:text-white" />
-                <h3 className="text-base mb-2">3000 Sq Ft</h3>
+                <h3 className="text-base mb-2">
+                  3000 <span>Sq Ft</span>
+                </h3>
                 <p className="text-sm opacity-70">Open training floor</p>
               </div>
             </div>
@@ -226,7 +228,7 @@ const TheSpace = () => {
             className="gap-3"
           >
             <WhatsAppIcon />
-            Schedule a Tour on WhatsApp
+            Schedule a Visit
           </Button>
         </div>
       </section>

@@ -194,7 +194,7 @@ const Home = () => {
             className="gap-3"
           >
             <WhatsAppIcon />
-            Get Started on WhatsApp
+            Get Started
           </Button>
         </div>
       </section>
