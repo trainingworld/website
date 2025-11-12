@@ -6,52 +6,64 @@ import {
   Dumbbell,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import heroSpace from "@/assets/hero-space.jpg";
 import { handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
-import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
+
+import heroSpace from "@/assets/hero-space.jpg";
+import wallBalls from "@/assets/exercises/wall-balls.jpg";
+import treadmill from "@/assets/exercises/treadmill-runs.jpg";
+import rowing from "@/assets/exercises/rowing.jpg";
+import weights from "@/assets/exercises/weights.jpg";
+import farmer from "@/assets/exercises/famer-carry.jpg";
 
 const TheSpace = () => {
   const exercises = [
-    "Lunge walks",
-    "Burpee broad jumps",
-    "Sled pull and push",
-    "Wall balls",
-    "Farmer carry",
-    "Treadmill runs",
-    "Rowing",
-    "Sprint drills",
-    "Weighted workouts",
-    "Functional Cardio",
+    {
+      name: "Lunge walks",
+      image:
+        "https://plus.unsplash.com/premium_photo-1663050848227-c272a44b4b8d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    },
+    {
+      name: "Burpee broad jumps",
+      image: "https://cdn.mos.cms.futurecdn.net/fS6KSNRUCamBX8Yz3AiteG.jpg",
+    },
+    {
+      name: "Sled pull and push",
+      image:
+        "https://thetibbarguy.com/cdn/shop/files/The_Push-Pull_Sled_FAQ.jpg?v=1744134913",
+    },
+    {
+      name: "Wall balls at Training World",
+      image: wallBalls,
+    },
+    {
+      name: "Farmer carry at Training World",
+      image: farmer,
+    },
+    {
+      name: "Treadmill runs at Training World",
+      image: treadmill,
+    },
+    {
+      name: "Rowing at Training World",
+      image: rowing,
+    },
+    {
+      name: "Sprint drills",
+      image:
+        "https://fastandfittraining.com/wp-content/uploads/RodDaveWarmup.jpg",
+    },
+    {
+      name: "Weighted workouts at Training World",
+      image: weights,
+    },
+    {
+      name: "Functional Cardio",
+      image:
+        "https://www.endomondo.com/wp-content/uploads/2024/12/Improve-Functional-Ability-endomondo.jpg",
+    },
   ];
-
-  // Create a mapping of exercise names to actual exercise images
-  const exerciseImages = {
-    "Lunge walks":
-      "https://plus.unsplash.com/premium_photo-1663050848227-c272a44b4b8d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-    "Burpee broad jumps":
-      "https://cdn.mos.cms.futurecdn.net/fS6KSNRUCamBX8Yz3AiteG.jpg",
-    "Sled pull and push":
-      "https://thetibbarguy.com/cdn/shop/files/The_Push-Pull_Sled_FAQ.jpg?v=1744134913",
-    "Wall balls":
-      "https://troyfitness.com/cdn/shop/articles/3_1000x.png?v=1640629112",
-    "Farmer carry":
-      "https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2019/04/5MovesCoreAbDumbellFarmersWalk0.jpg?quality=86&strip=all",
-    "Treadmill runs":
-      "https://runnerslab.com/wp-content/uploads/2022/08/how_to_run_on_a_treadmill.jpg",
-    Rowing:
-      "https://www.britishrowing.org/wp-content/uploads/2023/04/What-is-rowing-Lea-Crew.jpg",
-    "Sprint drills":
-      "https://fastandfittraining.com/wp-content/uploads/RodDaveWarmup.jpg",
-    "Weighted workouts":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK9HEySHtvc3IeWJULeJa-j5_3-3innKsrZA&s",
-    "Functional Cardio":
-      "https://www.endomondo.com/wp-content/uploads/2024/12/Improve-Functional-Ability-endomondo.jpg",
-  };
-
-  const [selectedExercise, setSelectedExercise] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen">
@@ -154,43 +166,29 @@ const TheSpace = () => {
             <h2>Exercises & Training</h2>
             <p className="text-white/70 mt-4 max-w-2xl mx-auto">
               One can easily work on a variety of functional movements and
-              exercises. Click on the exercise to learn more about them!
+              exercises.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
             {exercises.map((exercise, index) => (
-              <Dialog key={index}>
-                <DialogTrigger asChild>
-                  <div
-                    className={`border border-white/20 p-6 text-center hover:border-white/60 hover:bg-white/5 transition-all duration-300 cursor-pointer ${
-                      index === exercises.length - 1 &&
-                      exercises.length % 3 === 1
-                        ? "md:col-start-2"
-                        : ""
-                    }`}
-                    onClick={() => setSelectedExercise(exercise)}
-                  >
-                    <p className="text-sm font-semibold uppercase tracking-wide">
-                      {exercise}
-                    </p>
-                  </div>
-                </DialogTrigger>
-                <DialogContent className="max-w-4xl w-full p-0 bg-black border-white/20">
-                  <div className="relative">
-                    <img
-                      src={exerciseImages[exercise]}
-                      alt={exercise}
-                      className="w-full h-auto max-h-[80vh] object-cover"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                      <h3 className="text-white text-xl font-semibold uppercase tracking-wide">
-                        {exercise}
-                      </h3>
-                    </div>
-                  </div>
-                </DialogContent>
-              </Dialog>
+              <div
+                key={index}
+                className="group overflow-hidden border border-white/20 hover:border-white/60 transition-all duration-300"
+              >
+                <div className="relative aspect-square overflow-hidden">
+                  <img
+                    src={exercise.image}
+                    alt={exercise.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 bg-black border-t border-white/20">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-white">
+                    {exercise.name}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
 
