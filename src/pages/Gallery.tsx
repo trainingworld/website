@@ -4,6 +4,26 @@ import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
+import heroSpace from "@/assets/hero-space.JPG";
+
+import ga1 from "@/assets/gallery/space.jpg";
+import ga2 from "@/assets/gallery/rowing.jpg";
+import ga3 from "@/assets/gallery/rowing-2.jpg";
+import ga4 from "@/assets/gallery/farmer-carry.jpg";
+import ga5 from "@/assets/gallery/weights.jpg";
+import ga6 from "@/assets/gallery/wall-balls.jpg";
+
+// Add your gallery images here
+const galleryImages = [
+  // Each item now has an image and optional caption
+  { image: ga1, caption: "Training Space" },
+  { image: ga2, caption: "Rowing Machines" },
+  { image: ga3, caption: "Rowing Station" },
+  { image: ga4, caption: "Farmer Carry" },
+  { image: ga5, caption: "Free Weights" },
+  { image: ga6, caption: "Wall Balls" },
+];
+
 const Gallery = () => {
   // Placeholder for gallery images - user will upload their own later
   const placeholderImages = Array(12).fill(null);
@@ -12,7 +32,13 @@ const Gallery = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-black text-white py-32 px-4">
-        <div className="container mx-auto max-w-4xl text-center animate-fade-in">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroSpace})` }}
+        >
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative z-10 container mx-auto max-w-4xl text-center animate-fade-in">
           <Badge variant="outline" className="mb-4">
             Our Facility
           </Badge>
@@ -36,16 +62,35 @@ const Gallery = () => {
       <section className="py-24 px-4 bg-white">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {placeholderImages.map((_, index) => (
+            {galleryImages.map((item, index) => (
               <div
                 key={index}
-                className="aspect-square bg-muted hover:scale-105 transition-transform duration-300 overflow-hidden group"
+                className="bg-muted hover:scale-105 transition-transform duration-300 overflow-hidden group cursor-pointer rounded-lg"
               >
-                <div className="w-full h-full flex items-center justify-center bg-black/5">
-                  <p className="text-sm uppercase tracking-wider text-muted-foreground group-hover:text-black transition-colors">
-                    Gallery Image {index + 1}
-                  </p>
-                </div>
+                {item.image ? (
+                  <div className="flex flex-col">
+                    <div className="flex items-center justify-center">
+                      <img
+                        src={item.image}
+                        alt={item.caption || `Gallery image ${index + 1}`}
+                        className="w-full h-auto max-h-[500px] object-contain"
+                      />
+                    </div>
+                    {item.caption && (
+                      <div className="px-4 py-3 bg-white border-t border-gray-200">
+                        <p className="text-sm font-medium text-center text-gray-700">
+                          {item.caption}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="w-full aspect-square flex items-center justify-center bg-black/5">
+                    <p className="text-sm uppercase tracking-wider text-muted-foreground group-hover:text-black transition-colors">
+                      Gallery Image {index + 1}
+                    </p>
+                  </div>
+                )}
               </div>
             ))}
           </div>

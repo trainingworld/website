@@ -1,6 +1,6 @@
 import { MessageCircle, Award, Trophy, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroAbout from "@/assets/hero-about.jpg";
+import heroAbout from "@/assets/hero-about.JPG";
 import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
@@ -11,7 +11,7 @@ const About = () => {
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-[right_center] md:bg-center"
           style={{ backgroundImage: `url(${heroAbout})` }}
         >
           <div className="absolute inset-0 bg-black/50" />

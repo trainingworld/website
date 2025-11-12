@@ -16,6 +16,8 @@ import {
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
+import heroSpace from "@/assets/hero-space.JPG";
+
 const Contact = () => {
   const FAQs = [
     {
@@ -49,7 +51,13 @@ const Contact = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-black text-white py-32 px-4">
-        <div className="container mx-auto max-w-4xl text-center animate-fade-in">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroSpace})` }}
+        >
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative z-10 container mx-auto max-w-4xl text-center animate-fade-in">
           <Badge variant="outline" className="mb-4">
             Get In Touch
           </Badge>
