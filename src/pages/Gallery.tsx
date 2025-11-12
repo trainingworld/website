@@ -4,7 +4,7 @@ import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
-import heroSpace from "@/assets/hero-space.jpg";
+import heroGallery from "@/assets/hero-gallery.jpg";
 
 import ga1 from "@/assets/gallery/space.jpg";
 import ga2 from "@/assets/gallery/rowing.jpg";
@@ -34,7 +34,7 @@ const Gallery = () => {
       <section className="relative bg-black text-white py-32 px-4">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroSpace})` }}
+          style={{ backgroundImage: `url(${heroGallery})` }}
         >
           <div className="absolute inset-0 bg-black/50" />
         </div>
@@ -65,7 +65,7 @@ const Gallery = () => {
             {galleryImages.map((item, index) => (
               <div
                 key={index}
-                className="bg-muted hover:scale-105 transition-transform duration-300 overflow-hidden group cursor-pointer rounded-lg"
+                className=" hover:scale-105 transition-transform duration-300 overflow-hidden group cursor-pointer rounded-lg"
               >
                 {item.image ? (
                   <div className="flex flex-col">

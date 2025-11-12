@@ -16,7 +16,7 @@ import {
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
-import heroSpace from "@/assets/hero-space.jpg";
+import heroContact from "@/assets/hero-contact.jpg";
 
 const Contact = () => {
   const FAQs = [
@@ -53,7 +53,7 @@ const Contact = () => {
       <section className="relative bg-black text-white py-32 px-4">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroSpace})` }}
+          style={{ backgroundImage: `url(${heroContact})` }}
         >
           <div className="absolute inset-0 bg-black/50" />
         </div>
