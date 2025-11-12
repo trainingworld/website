@@ -4,7 +4,7 @@ import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
-import heroSpace from "@/assets/hero-space.JPG";
+import heroSpace from "@/assets/hero-space.jpg";
 
 import ga1 from "@/assets/gallery/space.jpg";
 import ga2 from "@/assets/gallery/rowing.jpg";

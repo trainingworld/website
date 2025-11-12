@@ -16,7 +16,7 @@ import {
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
-import heroSpace from "@/assets/hero-space.JPG";
+import heroSpace from "@/assets/hero-space.jpg";
 
 const Contact = () => {
   const FAQs = [
