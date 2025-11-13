@@ -55,7 +55,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white p-2"
+            className="lg:hidden text-white p-4"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -88,7 +88,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={handleCall}
-              className="text-white hover:bg-white/10 hover:text-white"
+              className="text-white hover:bg-white/10 hover:text-white px-8 py-8"
             >
               <Phone className="h-5 w-5" />
             </Button>
@@ -109,10 +109,10 @@ const Navigation = () => {
           <Sheet>
             <SheetTrigger asChild>
               <Button
-                className="lg:hidden text-white p-2"
+                className="lg:hidden text-white p-4"
                 variant="ghost"
                 // onClick={() => setIsOpen(!isOpen)}
-                // aria-label="Toggle menu"
+                aria-label="Toggle menu"
               >
                 <div className="scale-110">
                   <WhatsAppIcon />
