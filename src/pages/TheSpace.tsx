@@ -180,6 +180,7 @@ const TheSpace = () => {
                   <img
                     src={exercise.image}
                     alt={exercise.name}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
