@@ -10,7 +10,7 @@ import ga1 from "@/assets/gallery/space.jpg";
 import ga2 from "@/assets/gallery/rowing.jpg";
 import ga3 from "@/assets/gallery/rowing-2.jpg";
 import ga4 from "@/assets/gallery/farmer-carry.jpg";
-import ga5 from "@/assets/gallery/weights.jpg";
+import ga5 from "@/assets/gallery/weights.JPG";
 import ga6 from "@/assets/gallery/wall-balls.jpg";
 
 // Add your gallery images here

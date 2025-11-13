@@ -14,7 +14,7 @@ import heroSpace from "@/assets/hero-space.jpg";
 import wallBalls from "@/assets/exercises/wall-balls.jpg";
 import treadmill from "@/assets/exercises/treadmill-runs.jpg";
 import rowing from "@/assets/exercises/rowing.jpg";
-import weights from "@/assets/exercises/weights.jpg";
+import weights from "@/assets/exercises/weights.JPG";
 import farmer from "@/assets/exercises/famer-carry.jpg";
 
 const TheSpace = () => {
