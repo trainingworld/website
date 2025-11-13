@@ -1,12 +1,13 @@
-import { MessageCircle, Heart, Users, Target, TrendingUp } from "lucide-react";
+import { Heart, Users, Target, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroWhoNeedsUs from "@/assets/hero-who-needs-us.jpg";
-import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
+import { handleWhatsAppTrainingWorld } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
 const WhoNeedsUs = () => {
+  const heroWhoNeedsUs =
+    "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto,q_auto/hero-who-needs-us_qzl1zp.jpg";
   return (
     <div className="min-h-screen">
       {/* Hero Section */}

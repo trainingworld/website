@@ -7,12 +7,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
-import Home from "./pages/Home";
-import TheSpace from "./pages/TheSpace";
-import WhoNeedsUs from "./pages/WhoNeedsUs";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Gallery from "./pages/Gallery";
+import { appRoutes } from "./router/routes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,12 +23,9 @@ const App = () => (
           <Navigation />
           <main className="flex-1">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/the-space" element={<TheSpace />} />
-              <Route path="/who-needs-us" element={<WhoNeedsUs />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/gallery" element={<Gallery />} />
+              {appRoutes.map(({ path, element }) => (
+                <Route key={path} path={path} element={element} />
+              ))}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
