@@ -36,26 +36,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/the-space"
-                  className="text-white/70 hover:text-white text-sm transition-colors"
-                >
-                  The Space
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/who-needs-us"
-                  className="text-white/70 hover:text-white text-sm transition-colors"
-                >
-                  Who Needs Us
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/about"
                   className="text-white/70 hover:text-white text-sm transition-colors"
                 >
-                  About Me
+                  About
                 </Link>
               </li>
               <li>
@@ -64,6 +48,22 @@ const Footer = () => {
                   className="text-white/70 hover:text-white text-sm transition-colors"
                 >
                   Gallery
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-white/70 hover:text-white text-sm transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="https://trainingworld.co.in/sitemap.xml"
+                  className="text-white/70 hover:text-white text-sm transition-colors"
+                >
+                  Sitemap
                 </Link>
               </li>
             </ul>
