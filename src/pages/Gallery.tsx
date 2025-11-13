@@ -4,29 +4,47 @@ import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
-import heroGallery from "@/assets/hero-gallery.jpg";
-
-import ga1 from "@/assets/gallery/space.jpg";
-import ga2 from "@/assets/gallery/rowing.jpg";
-import ga3 from "@/assets/gallery/rowing-2.jpg";
-import ga4 from "@/assets/gallery/farmer-carry.jpg";
-import ga5 from "@/assets/gallery/weights.jpg";
-import ga6 from "@/assets/gallery/wall-balls.jpg";
-
 // Add your gallery images here
 const galleryImages = [
   // Each item now has an image and optional caption
-  { image: ga1, caption: "Training Space" },
-  { image: ga2, caption: "Rowing Machines" },
-  { image: ga3, caption: "Rowing Station" },
-  { image: ga4, caption: "Farmer Carry" },
-  { image: ga5, caption: "Free Weights" },
-  { image: ga6, caption: "Wall Balls" },
+  {
+    image:
+      "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/space_clozvl",
+    caption: "Training Space",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/rowing_mxpxfa",
+    caption: "Rowing Machines",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/rowing-2_rcd6db",
+    caption: "Rowing Station",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/farmer-carry_to1suw",
+    caption: "Farmer Carry",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/weights_ggjbkq",
+    caption: "Free Weights",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/wall-balls_iwye4j",
+    caption: "Wall Balls",
+  },
 ];
 
 const Gallery = () => {
   // Placeholder for gallery images - user will upload their own later
   //const placeholderImages = Array(12).fill(null);
+
+  const heroGallery =
+    "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/hero-gallery_qbnk1r";
 
   return (
     <div className="min-h-screen">

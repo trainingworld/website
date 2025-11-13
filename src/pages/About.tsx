@@ -1,11 +1,12 @@
 import { MessageCircle, Award, Trophy, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroAbout from "@/assets/hero-about.jpg";
 import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
 const About = () => {
+  const heroAbout =
+    "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/hero-about_unk1p8";
   return (
     <div className="min-h-screen">
       {/* Hero Section */}

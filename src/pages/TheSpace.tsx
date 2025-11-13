@@ -1,23 +1,13 @@
-import {
-  MessageCircle,
-  Wind,
-  Thermometer,
-  Users2,
-  Dumbbell,
-} from "lucide-react";
+import { Wind, Thermometer, Users2, Dumbbell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
-import heroSpace from "@/assets/hero-space.jpg";
-import wallBalls from "@/assets/exercises/wall-balls.jpg";
-import treadmill from "@/assets/exercises/treadmill-runs.jpg";
-import rowing from "@/assets/exercises/rowing.jpg";
-import weights from "@/assets/exercises/weights.JPG";
-import farmer from "@/assets/exercises/famer-carry.jpg";
-
 const TheSpace = () => {
+  const heroSpace =
+    "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/hero-space_udm5vp";
+
   const exercises = [
     {
       name: "Lunge walks",
@@ -35,19 +25,23 @@ const TheSpace = () => {
     },
     {
       name: "Wall balls at Training World",
-      image: wallBalls,
+      image:
+        "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/wall-balls_n2lsgy",
     },
     {
       name: "Farmer carry at Training World",
-      image: farmer,
+      image:
+        "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/famer-carry_weiko1",
     },
     {
       name: "Treadmill runs at Training World",
-      image: treadmill,
+      image:
+        "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/treadmill-runs_jkes49",
     },
     {
       name: "Rowing at Training World",
-      image: rowing,
+      image:
+        "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/rowing_yakbwk",
     },
     {
       name: "Sprint drills",
@@ -56,7 +50,8 @@ const TheSpace = () => {
     },
     {
       name: "Weighted workouts at Training World",
-      image: weights,
+      image:
+        "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/weights_y8at2l",
     },
     {
       name: "Functional Cardio",

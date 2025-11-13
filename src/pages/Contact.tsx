@@ -16,9 +16,9 @@ import {
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
-import heroContact from "@/assets/hero-contact.jpg";
-
 const Contact = () => {
+  const heroContact =
+    "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/hero-contact_rvv9vz";
   const FAQs = [
     {
       question: "Do I need prior fitness experience?",

@@ -1,11 +1,12 @@
 import { Award, Users, Target, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroHome from "@/assets/hero-home.jpg";
 import { handleWhatsAppHyrox, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const heroHome =
+    "https://res.cloudinary.com/dnplzkpot/image/upload/f_auto/q_auto/hero-home_e9475r";
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
