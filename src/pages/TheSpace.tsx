@@ -11,11 +11,11 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
 import heroSpace from "@/assets/hero-space.JPG";
-import wallBalls from "@/assets/exercises/wall-balls.JPG";
-import treadmill from "@/assets/exercises/treadmill-runs.JPG";
-import rowing from "@/assets/exercises/rowing.JPG";
+import wallBalls from "@/assets/exercises/wall-balls.jpg";
+import treadmill from "@/assets/exercises/treadmill-runs.jpg";
+import rowing from "@/assets/exercises/rowing.jpg";
 import weights from "@/assets/exercises/weights.JPG";
-import farmer from "@/assets/exercises/famer-carry.JPG";
+import farmer from "@/assets/exercises/famer-carry.jpg";
 
 const TheSpace = () => {
   const exercises = [

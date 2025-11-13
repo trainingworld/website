@@ -1,6 +1,6 @@
 import { MessageCircle, Award, Trophy, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroAbout from "@/assets/hero-about.JPG";
+import heroAbout from "@/assets/hero-about.jpg";
 import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";

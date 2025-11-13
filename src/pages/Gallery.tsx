@@ -4,14 +4,14 @@ import { handleWhatsApp, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 
-import heroGallery from "@/assets/hero-gallery.JPG";
+import heroGallery from "@/assets/hero-gallery.jpg";
 
-import ga1 from "@/assets/gallery/space.JPG";
-import ga2 from "@/assets/gallery/rowing.JPG";
-import ga3 from "@/assets/gallery/rowing-2.JPG";
-import ga4 from "@/assets/gallery/farmer-carry.JPG";
-import ga5 from "@/assets/gallery/weights.JPG";
-import ga6 from "@/assets/gallery/wall-balls.JPG";
+import ga1 from "@/assets/gallery/space.jpg";
+import ga2 from "@/assets/gallery/rowing.jpg";
+import ga3 from "@/assets/gallery/rowing-2.jpg";
+import ga4 from "@/assets/gallery/farmer-carry.jpg";
+import ga5 from "@/assets/gallery/weights.jpg";
+import ga6 from "@/assets/gallery/wall-balls.jpg";
 
 // Add your gallery images here
 const galleryImages = [
