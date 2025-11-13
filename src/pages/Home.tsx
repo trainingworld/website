@@ -1,6 +1,6 @@
 import { Award, Users, Target, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroHome from "@/assets/hero-home.JPG";
+import heroHome from "@/assets/hero-home.jpg";
 import { handleWhatsAppHyrox, handleWhatsAppTrainingWorld } from "@/lib/utils";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Link } from "react-router-dom";
