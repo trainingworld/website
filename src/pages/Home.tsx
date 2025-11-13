@@ -40,7 +40,7 @@ const Home = () => {
               onClick={handleWhatsAppHyrox}
               className="gap-3"
             >
-              <WhatsAppIcon />
+              <WhatsAppIcon variant="light" />
               Learn about Hyrox
             </Button>
             <Button

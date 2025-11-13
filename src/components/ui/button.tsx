@@ -22,7 +22,7 @@ const buttonVariants = cva(
         hero: "bg-white text-black border-2 border-white hover:bg-transparent hover:text-white px-12 py-4 text-sm",
         cta: "bg-black text-white border-2 border-black hover:bg-white hover:text-black px-12 py-4 text-sm",
         whatsapp:
-          "bg-[#25D366] text-white hover:bg-[#20BA5A] shadow-lg hover:shadow-xl hover:scale-105",
+          "bg-[#25d366] text-[#1C1E21] hover:bg-[#20BA5A] shadow-lg hover:shadow-xl hover:scale-105",
         whatsappSecondary:
           "bg-transparent text-[#25D366] border-2 border-[#25D366] hover:bg-[#25D366] hover:text-white shadow-lg hover:shadow-xl hover:scale-105",
       },
