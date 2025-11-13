@@ -85,6 +85,7 @@ const Contact = () => {
                 size="lg"
                 onClick={handleWhatsAppTrainingWorld}
                 className="gap-3"
+                aria-label="Whatsapp us"
               >
                 <WhatsAppIcon />
                 Start WhatsApp Chat
@@ -104,6 +105,7 @@ const Contact = () => {
                 size="lg"
                 onClick={handleCall}
                 className="border-black text-black gap-3 group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-black"
+                aria-label="Call us"
               >
                 <Phone className="h-5 w-5" />
                 +91 78385 26644
@@ -208,6 +210,7 @@ const Contact = () => {
             // size="lg"
             onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
+            aria-label="Get started"
           >
             <WhatsAppIcon />
             Get Started

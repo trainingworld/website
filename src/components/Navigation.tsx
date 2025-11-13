@@ -96,7 +96,12 @@ const Navigation = () => {
             {/* Desktop: WhatsApp opens a side sheet */}
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="whatsapp" size="sm" className="gap-2">
+                <Button
+                  variant="whatsapp"
+                  size="sm"
+                  className="gap-2"
+                  aria-label="Whatsapp Us"
+                >
                   <WhatsAppIcon />
                   WhatsApp Us
                 </Button>
@@ -146,6 +151,7 @@ const Navigation = () => {
                   size="sm"
                   onClick={handleCall}
                   className="flex-1 text-white border-white hover:bg-white hover:text-black"
+                  aria-label="Call us"
                 >
                   <Phone className="h-4 w-4 mr-2" />
                   Call
@@ -155,6 +161,7 @@ const Navigation = () => {
                   size="sm"
                   onClick={handleWhatsAppHyrox}
                   className="flex-1 text-white border-white hover:bg-white hover:text-black"
+                  aria-label="Learn about Hyrox"
                 >
                   <WhatsAppIcon />
                   Learn about Hyrox
@@ -164,6 +171,7 @@ const Navigation = () => {
                   size="sm"
                   onClick={handleWhatsAppTrainingWorld}
                   className="flex-1"
+                  aria-label="Contact Training World"
                 >
                   <WhatsAppIcon />
                   Contact Training World

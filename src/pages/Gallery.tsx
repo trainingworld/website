@@ -189,6 +189,7 @@ const Gallery = () => {
             // size="lg"
             onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
+            aria-label="Book a tour at Training World"
           >
             <WhatsAppIcon />
             Book a Tour

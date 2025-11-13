@@ -158,7 +158,11 @@ const WhoNeedsUs = () => {
               unflinchingly - is on providing you the kind of workout most
               suited for you.
             </p>
-            <Button variant="outline" className="flex mx-auto mt-8 flex-1">
+            <Button
+              variant="outline"
+              className="flex mx-auto mt-8 flex-1"
+              aria-label="Hear from the coach"
+            >
               <Link to={"/about"}>Hear from the Coach</Link>
             </Button>
           </div>
@@ -178,6 +182,7 @@ const WhoNeedsUs = () => {
             size="lg"
             onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
+            aria-label="Chat with us"
           >
             <WhatsAppIcon />
             Chat With Us

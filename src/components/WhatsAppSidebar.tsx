@@ -45,6 +45,7 @@ const WhatsAppSidebar = () => {
             size="sm"
             onClick={handleWhatsAppHyrox}
             className="w-full text-white border-white hover:bg-white hover:text-black"
+            aria-label="Learn more about Hyrox"
           >
             Learn More About HYROX
           </Button>
@@ -70,6 +71,7 @@ const WhatsAppSidebar = () => {
             size="sm"
             onClick={handleWhatsAppTrainingWorld}
             className="w-full gap-2"
+            aria-label="Contact Training World"
           >
             <WhatsAppIcon />
             Contact Training World

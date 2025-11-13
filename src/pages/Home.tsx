@@ -39,6 +39,7 @@ const Home = () => {
               size="default"
               onClick={handleWhatsAppHyrox}
               className="gap-3"
+              aria-label="Learn about Hyrox"
             >
               <WhatsAppIcon variant="light" />
               Learn about Hyrox
@@ -48,6 +49,7 @@ const Home = () => {
               size="default"
               onClick={handleWhatsAppTrainingWorld}
               className="gap-3"
+              aria-label="Workout at Training World"
             >
               <WhatsAppIcon />
               Workout at Training World
@@ -166,7 +168,11 @@ const Home = () => {
               </ul>
             </div>
           </div>
-          <Button variant="outline" className="flex mx-auto mt-8 flex-1">
+          <Button
+            variant="outline"
+            className="flex mx-auto mt-8 flex-1"
+            aria-label="Check out the space"
+          >
             <Link to={"/the-space"}>Check out the Space</Link>
           </Button>
         </div>
@@ -185,6 +191,7 @@ const Home = () => {
             size="lg"
             onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
+            aria-label="Get Started"
           >
             <WhatsAppIcon />
             Get Started

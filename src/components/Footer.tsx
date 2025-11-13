@@ -115,6 +115,7 @@ const Footer = () => {
               onClick={handleWhatsAppTrainingWorld}
               variant="whatsapp"
               size="sm"
+              aria-label="Whatsapp Us"
             >
               <WhatsAppIcon />
               WhatsApp Us

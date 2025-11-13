@@ -156,6 +156,7 @@ const About = () => {
             // size="lg"
             onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
+            aria-label="Message Richard"
           >
             <WhatsAppIcon className="scale-150" />
             Message Richard on WhatsApp

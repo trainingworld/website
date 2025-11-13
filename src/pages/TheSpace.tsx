@@ -62,6 +62,7 @@ const TheSpace = () => {
                 variant="whatsapp"
                 onClick={handleWhatsAppTrainingWorld}
                 className="gap-2"
+                aria-label="Book a visit"
               >
                 <WhatsAppIcon />
                 Book a Visit
@@ -192,6 +193,7 @@ const TheSpace = () => {
             size="lg"
             onClick={handleWhatsAppTrainingWorld}
             className="gap-3"
+            aria-label="Schedule a visit"
           >
             <WhatsAppIcon />
             Schedule a Visit
