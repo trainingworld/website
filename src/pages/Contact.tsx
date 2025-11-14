@@ -130,6 +130,7 @@ const Contact = () => {
               <MapPin className="h-10 w-10 mx-auto mb-4" />
               <h3 className="mb-3">Location</h3>
               <p className="text-muted-foreground text-sm">
+                B-5/28, <br />
                 Safdarjung Enclave, <br />
                 New Delhi, India
               </p>

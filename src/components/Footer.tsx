@@ -96,7 +96,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
                 <span className="text-white/70 text-sm">
-                  Safdarjung Enclave,
+                  B-5/28, Safdarjung Enclave,
                   <br /> New Delhi, India
                 </span>
               </li>
