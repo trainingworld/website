@@ -158,7 +158,7 @@ const About = () => {
             className="gap-3"
             aria-label="Message Richard"
           >
-            <WhatsAppIcon className="scale-150" />
+            <WhatsAppIcon />
             Message Richard on WhatsApp
           </Button>
         </div>

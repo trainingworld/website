@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import {
   handleWhatsAppHyrox,
@@ -9,14 +9,7 @@ import {
 } from "@/lib/utils";
 import Logo from "./Logo";
 import WhatsAppIcon from "./WhatsAppIcon";
-import {
-  Sheet,
-  SheetTrigger,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-} from "./ui/sheet";
+import { Sheet, SheetTrigger } from "./ui/sheet";
 import WhatsAppSidebar from "./WhatsAppSidebar";
 
 const Navigation = () => {
@@ -114,13 +107,13 @@ const Navigation = () => {
           <Sheet>
             <SheetTrigger asChild>
               <Button
-                className="lg:hidden text-white p-4"
+                className="lg:hidden text-white p-4 hover:bg-white/10 hover:text-white"
                 variant="ghost"
                 // onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle menu"
               >
                 <div className="scale-110">
-                  <WhatsAppIcon />
+                  <WhatsAppIcon variant="light" />
                 </div>
               </Button>
             </SheetTrigger>
@@ -163,7 +156,7 @@ const Navigation = () => {
                   className="flex-1 text-white border-white hover:bg-white hover:text-black"
                   aria-label="Learn about Hyrox"
                 >
-                  <WhatsAppIcon />
+                  <WhatsAppIcon variant="light" />
                   Learn about Hyrox
                 </Button>
                 <Button

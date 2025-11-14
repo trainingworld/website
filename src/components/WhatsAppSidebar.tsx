@@ -44,9 +44,10 @@ const WhatsAppSidebar = () => {
             variant="outline"
             size="sm"
             onClick={handleWhatsAppHyrox}
-            className="w-full text-white border-white hover:bg-white hover:text-black"
+            className="w-full text-white border-white"
             aria-label="Learn more about Hyrox"
           >
+            <WhatsAppIcon variant="light" />
             Learn More About HYROX
           </Button>
         </div>
