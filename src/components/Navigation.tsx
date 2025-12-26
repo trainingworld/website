@@ -12,7 +12,11 @@ import WhatsAppIcon from "./WhatsAppIcon";
 import { Sheet, SheetTrigger } from "./ui/sheet";
 import WhatsAppSidebar from "./WhatsAppSidebar";
 
-const Navigation = () => {
+type NavigationProps = {
+  topbarOffset?: boolean;
+};
+
+const Navigation: React.FC<NavigationProps> = ({ topbarOffset = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -38,9 +42,11 @@ const Navigation = () => {
     { name: "Contact", path: "/contact" },
   ];
 
+  const topClass = topbarOffset ? "top-12 sm:top-8 z-40" : "top-0 z-50";
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed ${topClass} left-0 right-0 transition-all duration-300 ${
         isScrolled ? "bg-black/95 backdrop-blur-sm" : "bg-transparent"
       }`}
     >
