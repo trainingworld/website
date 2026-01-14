@@ -14,7 +14,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
-  const SHOW_TOPBAR = true; // toggle this flag to show/hide the topbar
+  const SHOW_TOPBAR = false; // toggle this flag to show/hide the topbar
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
